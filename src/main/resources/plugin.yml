@@ -1,0 +1,38 @@
+name: World_Management
+version: 0.0.1
+main: nyanneko.world.Main
+author: Nyanneko0113
+
+commands:
+  worldcreate:
+    description: ワールドを作成するコマンド
+    aliases: [wcreate, wc]
+    permission: nyanneko.world.command.worldcreate
+  worldremove:
+    description: ワールドを消去するコマンド
+    aliases: [wremove, wr]
+    permission: nyanneko.world.command.worldremove
+  worldlist:
+    description: ワールドを表示するコマンド
+    aliases: [wlist, wl]
+    permission: nyanneko.world.command.worldlist
+  worldload:
+    description: ワールドをロードするコマンド
+    aliases: [wload]
+    permission: nyanneko.world.command.worldload
+  worldunload:
+    description: ワールドをアンロードするコマンド
+    aliases: [wunload]
+    permission: nyanneko.world.command.worldunload
+  worldset:
+    description: ワールドを設定するコマンド
+    aliases: [wset, ws]
+    permission: nyanneko.world.command.worldset
+  worldteleport:
+    description: ワールドにテレポートするコマンド
+    aliases: [wtp, wteleport, wt]
+    permission: nyanneko.world.command.worldteleport
+  worldsettingget:
+    description: ワールドの情報を取得するコマンド
+    aliases: [wsg, worldsg, worldsettingg, worldsetget]
+    permission: nyanneko.world.command.worldsettingget
