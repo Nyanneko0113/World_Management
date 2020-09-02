@@ -1,5 +1,7 @@
 package nyanneko.world.api;
 
+import java.util.ArrayList;
+
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -9,14 +11,31 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class ItemAPI {
 
-	public ItemStack createItem(ItemStack item, Short durability) {
+	public ItemStack getItem(ItemStack item, Short durability) {
 	    ItemMeta im = item.getItemMeta();
 	    item.setDurability((short) durability);
 	    item.setItemMeta(im);
 	    return item;
 	}
 
-	public ItemStack createItem(ItemStack item, String name, Short durability) {
+	public ItemStack getItemname(ItemStack item, String name) {
+	    ItemMeta im = item.getItemMeta();
+	    im.setDisplayName(name);
+	    item.setItemMeta(im);
+	    return item;
+	}
+
+	public ItemStack getItem(ItemStack item,  String name ,String description) {
+	    ItemMeta im = item.getItemMeta();
+	    im.setDisplayName(name);
+	    ArrayList<String> lore = new ArrayList<String>();
+	    lore.add(description);
+	    im.setLore(lore);
+	    item.setItemMeta(im);
+	    return item;
+	}
+
+	public ItemStack getItem(ItemStack item, String name, Short durability) {
 	    ItemMeta im = item.getItemMeta();
 	    im.setDisplayName(name);
 	    item.setDurability((short) durability);
@@ -24,7 +43,7 @@ public class ItemAPI {
 	    return item;
 	}
 
-	public ItemStack createItem(ItemStack item, String name, Short durability, Enchantment ench, int level) {
+	public ItemStack getItem(ItemStack item, String name, Short durability, Enchantment ench, int level) {
 	    ItemMeta im = item.getItemMeta();
 	    im.setDisplayName(name);
 	    item.setDurability((short) durability);
